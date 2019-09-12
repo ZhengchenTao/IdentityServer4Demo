@@ -11,7 +11,8 @@ namespace Client
         static async Task Main(string[] args)
         {
             var client = new HttpClient();
-            var disco = await client.GetDiscoveryDocumentAsync("https://localhost:44342");
+            //var disco = await client.GetDiscoveryDocumentAsync("https://localhost:44342");
+            var disco = await client.GetDiscoveryDocumentAsync("https://localhost:44302");
             if (disco.IsError)
             {
                 Console.WriteLine(disco.Error);
@@ -37,7 +38,8 @@ namespace Client
             var apiClient = new HttpClient();
             apiClient.SetBearerToken(tokenResponse.AccessToken);
 
-            var apiResponse = await apiClient.GetAsync("https://localhost:44364/Identity");
+            var apiResponse = await apiClient.GetAsync("https://localhost:44302/Identity");
+            //var apiResponse = await apiClient.GetAsync("https://localhost:44364/Identity");
             if (!apiResponse.IsSuccessStatusCode)
             {
                 Console.WriteLine(apiResponse.StatusCode);
