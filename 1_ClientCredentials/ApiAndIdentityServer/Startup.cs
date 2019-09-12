@@ -23,7 +23,8 @@ namespace ApiAndIdentityServer
             var builder = services.AddIdentityServer()
                .AddInMemoryIdentityResources(Config.GetIdentityResources())
                .AddInMemoryApiResources(Config.GetApi())
-               .AddInMemoryClients(Config.GetClients());
+               .AddInMemoryClients(Config.GetClients())
+               .AddTestUsers(Config.GetUsers());
 
             builder.AddDeveloperSigningCredential();
 
