@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{EE051064-A1B0-480E-9CA0-F85C8BDCDC1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Client", "MVC_Client\MVC_Client.csproj", "{618FEA9E-95FC-4295-81B8-00A98F16B166}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Client", "MVC_Client\MVC_Client.csproj", "{03C92CBC-922C-4B2C-960B-7AD0582393D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{EE051064-A1B0-480E-9CA0-F85C8BDCDC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE051064-A1B0-480E-9CA0-F85C8BDCDC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE051064-A1B0-480E-9CA0-F85C8BDCDC1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{618FEA9E-95FC-4295-81B8-00A98F16B166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{618FEA9E-95FC-4295-81B8-00A98F16B166}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{618FEA9E-95FC-4295-81B8-00A98F16B166}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{618FEA9E-95FC-4295-81B8-00A98F16B166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C92CBC-922C-4B2C-960B-7AD0582393D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C92CBC-922C-4B2C-960B-7AD0582393D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C92CBC-922C-4B2C-960B-7AD0582393D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C92CBC-922C-4B2C-960B-7AD0582393D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
