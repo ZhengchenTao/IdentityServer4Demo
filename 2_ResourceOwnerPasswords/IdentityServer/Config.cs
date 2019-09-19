@@ -2,7 +2,7 @@
 using IdentityServer4.Test;
 using System.Collections.Generic;
 
-namespace ApiAndIdentityServer
+namespace IdentityServer
 {
     public class Config
     {
@@ -14,7 +14,7 @@ namespace ApiAndIdentityServer
             };
         }
 
-        public static IEnumerable<ApiResource> GetApi()
+        public static IEnumerable<ApiResource> GetApiResources()
         {
             return new List<ApiResource>
             {

@@ -9,25 +9,27 @@ namespace Client
 {
     class Program
     {
-        private static string apiUrl = "https://localhost:44364";
-        private static string identityServerUrl = "https://localhost:44342";
+        private static string ApiUrl = "https://localhost:44302";
+        private static string IdentityServerUrl = "https://localhost:44301";
 
         static async Task Main(string[] args)
         {
             var client = new HttpClient();
-            var disco = await client.GetDiscoveryDocumentAsync(identityServerUrl);
+            var disco = await client.GetDiscoveryDocumentAsync(IdentityServerUrl);
             if (disco.IsError)
             {
                 Console.WriteLine(disco.Error);
                 return;
             }
 
-            var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            var tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disco.TokenEndpoint,
-
-                ClientId = "client",
+                ClientId = "ro.client",
                 ClientSecret = "secret",
+
+                UserName = "alice",
+                Password = "password",
                 Scope = "api1"
             });
 
@@ -44,7 +46,7 @@ namespace Client
             var apiClient = new HttpClient();
             apiClient.SetBearerToken(tokenResponse.AccessToken);
 
-            var apiResponse = await apiClient.GetAsync($"{apiUrl}/Identity");
+            var apiResponse = await apiClient.GetAsync($"{ApiUrl}/Identity");
             if (!apiResponse.IsSuccessStatusCode)
             {
                 Console.WriteLine(apiResponse.StatusCode);
