@@ -8,8 +8,8 @@ namespace Client
 {
     class Program
     {
-        private static string ApiUrl = "http://localhost:5001";
-        private static string IdentityServerUrl = "http://localhost:5000";
+        private static string ApiUrl = "https://localhost:44302";
+        private static string IdentityServerUrl = "https://localhost:44301";
         static async Task Main(string[] args)
         {
             var client = new HttpClient();
