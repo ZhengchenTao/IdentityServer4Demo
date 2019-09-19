@@ -1,4 +1,5 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer4;
+using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System.Collections.Generic;
 
@@ -10,7 +11,8 @@ namespace IdentityServer
         {
             return new IdentityResource[]
             {
-                new IdentityResources.OpenId()
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile(),
             };
         }
 
@@ -28,16 +30,19 @@ namespace IdentityServer
             {
                 new Client
                 {
-                    ClientId="ro.client",
+                    ClientId="mvc",
+                    ClientName="MVC Client",
+                    AllowedGrantTypes  = GrantTypes.Implicit,
 
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    RedirectUris = { "https://localhost:44310/signin-oidc" },
 
-                    ClientSecrets =
+                    PostLogoutRedirectUris= { "https://localhost:44310/signout-callback-oidc" },
+
+                    AllowedScopes = new List<string>
                     {
-                        new Secret("secret".Sha256())
-                    },
-
-                    AllowedScopes = { "api1" }
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    }
                 }
             };
         }

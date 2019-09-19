@@ -31,8 +31,15 @@ namespace IdentityServer
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            var builder = services.AddIdentityServer()
+               .AddInMemoryIdentityResources(Config.GetIdentityResources())
+               .AddInMemoryApiResources(Config.GetApi())
+               .AddInMemoryClients(Config.GetClients())
+               .AddTestUsers(Config.GetUsers());
+
+            builder.AddDeveloperSigningCredential();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
