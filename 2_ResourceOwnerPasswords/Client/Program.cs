@@ -11,7 +11,6 @@ namespace Client
     {
         private static string apiUrl = "https://localhost:44364";
         private static string identityServerUrl = "https://localhost:44342";
-        private static string apiAndIdentityServerUrl = "https://localhost:44302";
 
         static async Task Main(string[] args)
         {
