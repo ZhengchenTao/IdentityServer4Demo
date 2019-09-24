@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{EE051064-A1B0-480E-9CA0-F85C8BDCDC1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavascriptClient", "JavascriptClient\JavascriptClient.csproj", "{6096D271-5FC8-4A7F-A169-6CEF725CF418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JavascriptClient", "JavascriptClient\JavascriptClient.csproj", "{6096D271-5FC8-4A7F-A169-6CEF725CF418}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "..\Api\Api.csproj", "{942D9736-2C68-4554-A1CB-3D72DB11CBBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6096D271-5FC8-4A7F-A169-6CEF725CF418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6096D271-5FC8-4A7F-A169-6CEF725CF418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6096D271-5FC8-4A7F-A169-6CEF725CF418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942D9736-2C68-4554-A1CB-3D72DB11CBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942D9736-2C68-4554-A1CB-3D72DB11CBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942D9736-2C68-4554-A1CB-3D72DB11CBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942D9736-2C68-4554-A1CB-3D72DB11CBBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
