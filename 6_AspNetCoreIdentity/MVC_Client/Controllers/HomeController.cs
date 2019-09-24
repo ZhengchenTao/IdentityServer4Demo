@@ -5,7 +5,6 @@ using System.Diagnostics;
 
 namespace MVC_Client.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()
@@ -13,8 +12,10 @@ namespace MVC_Client.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [Authorize]
+        public IActionResult Secure()
         {
+            ViewData["Message"] = "Secure page.";
             return View();
         }
 
