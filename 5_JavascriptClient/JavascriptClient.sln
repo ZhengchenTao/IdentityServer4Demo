@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JavascriptClient", "Javascr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "..\Api\Api.csproj", "{942D9736-2C68-4554-A1CB-3D72DB11CBBE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_Client", "MVC_Client\MVC_Client.csproj", "{4A479123-67DE-4478-AE02-E2E47B5E628A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{942D9736-2C68-4554-A1CB-3D72DB11CBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{942D9736-2C68-4554-A1CB-3D72DB11CBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{942D9736-2C68-4554-A1CB-3D72DB11CBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A479123-67DE-4478-AE02-E2E47B5E628A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A479123-67DE-4478-AE02-E2E47B5E628A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A479123-67DE-4478-AE02-E2E47B5E628A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A479123-67DE-4478-AE02-E2E47B5E628A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
