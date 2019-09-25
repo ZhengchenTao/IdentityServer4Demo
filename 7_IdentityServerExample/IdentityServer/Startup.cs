@@ -25,6 +25,12 @@ namespace IdentityServer
             services.AddDbContext<IdentityContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
+
+            services.AddIdentityServer()
+               .AddDeveloperSigningCredential()
+               .AddInMemoryIdentityResources(Config.GetIdentityResources())
+               .AddInMemoryApiResources(Config.GetApiResources())
+               .AddInMemoryClients(Config.GetClients());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,8 +47,9 @@ namespace IdentityServer
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseIdentityServer();
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
