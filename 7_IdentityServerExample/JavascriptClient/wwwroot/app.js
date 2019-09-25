@@ -21,10 +21,10 @@ document.getElementById("logout").addEventListener("click", logout, false);
 var config = {
     authority: "https://localhost:44301",
     client_id: "js",
-    redirect_uri: "https://localhost:44311/callback.html",
+    redirect_uri: "https://localhost:44303/callback.html",
     response_type: "code",
     scope: "openid profile api1",
-    post_logout_redirect_uri: "https://localhost:44311/index.html",
+    post_logout_redirect_uri: "https://localhost:44303/index.html",
 };
 
 var mgr = new Oidc.UserManager(config);
